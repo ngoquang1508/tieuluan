@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
 
                     document.querySelector('input[name="Về trang chủ"]').addEventListener('click', () => {
-                            window.location.href = '../trangchu.html'
+                            window.location.href = '../website/trangchu.html'
                         }
                     )
                 })
