@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../director/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+<body>
+    <div class="dark-mode-btn" id="dark-mode-btn">
+        <i class="bx bx-moon"></i>
+        <i class="bx bx-sun"></i>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <div class="header">
+            <div class="menu-btn" id="menu-btn">
+                <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="brand">
+                <img class="brand-dark" src="../director/brand/admin-light.svg" alt="logo">
+                <img class="brand-light" src="../director/brand/admin-dark.svg" alt="logo">
+                <span>Giám đốc</span>
+            </div>
+        </div>
+
+        <div class="menu-container">
+            <div class="search">
+                <i class="bx bx-search"></i>
+                <input type="search" placeholder="Tìm kiếm">
+            </div>
+            <ul class="menu">
+                <li id="menu-item" class="menu-item menu-item-static active">
+                    <a href="#" class="menu-link">
+                        <i class="bx bx-home-alt-2"></i>
+                        <span>Trang chủ</span>
+                    </a>
+                </li>
+                <li id="menu-item" class="menu-item menu-item-static">
+                    <a href="#" class="menu-link">
+                        <i class="bx bx-bar-chart-alt-2"></i>
+                        <span>Thống kê</span>
+                    </a>
+                </li>
+                <li id="menu-item" class="menu-item menu-item-dropdown">
+                    <a href="#" class="menu-link">
+                        <i class="bx bx-bell notification"></i>
+                        <span>Thông báo</span>
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="sub-menu-link">Dự án cần phê duyệt</a></li>
+                        <li><a href="#" class="sub-menu-link">Báo cáo</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="menu-item menu-item-dropdown">
+                    <a href="#" class="menu-link">
+                        <i class="bx bx-file-blank"></i>
+                        <span>File</span>
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="sub-menu-link">Images</a></li>
+                        <li><a href="#" class="sub-menu-link">Audios</a></li>
+                    </ul>
+                </li> -->
+            </ul>
+        </div>
+        <div class="footer">
+            <ul class="menu">
+                <li class="menu-item menu-item-static">
+                    <a href="#" class="menu-link">
+                        <i class="bx bx-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="user">
+                <div class="user-img">
+                    <img src="../assets/img/avata.jpg" alt="user">
+                </div>
+                <div class="user-data">
+                    <span class="name">John</span>
+                    <span class="email">John@gmail.com</span>
+                </div>
+                <div class="user-icon">
+                    <i class="bx bx-exit exit" id="exit"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="sidebar-content__list">
+            <!-- Mục trang chủ -->
+            <div class="sidebar-content__item" style="display: block;">
+                <h1>Trang chủ</h1>
+                <div class="projects-completed">
+                    <div class="home-projects">
+                        <h2>Dự án đã hoàn thành</h2>
+                        <div class="projects__list"></div>
+                    </div>
+                    <div class="home-projects">
+                        <h2>Cá nhân nhận hỗ trợ</h2>
+                        <div class="projects__list"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mục biểu đồ -->
+            <div class="sidebar-content__item" style="display: none;">
+                <h1>Biểu đồ</h1>
+                <div class="dashboard">
+                    <h2>Biểu đồ thống kê</h2>
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <h3>Tổng số dự án</h3>
+                            <p id="projects-count">5</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Số tiền đã giải ngân</h3>
+                            <p id="disbursed-amount">20,000,000 VNĐ</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Số người quyên góp</h3>
+                            <p id="donors-count">120</p>
+                        </div>
+                    </div>
+                    <canvas id="donationChart"></canvas>
+                </div>
+            </div>
+            <!-- Mục Thông báo -->
+            <div class="sidebar-content__item" style="display: none;">
+                <h1>Thông báo</h1>
+                
+                <!-- Dự án cần phê duyệt -->
+                <div class="item-child approve" style="display: none;">
+                    <div class="container">
+                        <h2>Phê Duyệt Báo Cáo</h2>
+                
+                        <table class="report-table">
+                            <thead>
+                                <tr>
+                                    <th>Tên Báo Cáo</th>
+                                    <th>Ngày Gửi</th>
+                                    <th>Nội Dung</th>
+                                    <th>Phê Duyệt</th>
+                                    <th>Từ Chối</th>
+                                    <th>Kết Quả</th>
+                                    <th>Xem chi tiết</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Render danh sách cần duyệt từ JS -->
+                            </tbody>
+                        </table>
+                    </div>                    
+                </div>
+
+                <!-- Nhận báo cáo -->
+                <div class="item-child getNotified" style="display: none;">
+                    <div class="container">
+                        <h2>Báo Cáo Tiến Độ Dự Án và Nhà Tài Trợ Hợp Tác</h2>
+                        
+                        <table class="report-table">
+                            <thead>
+                                <tr>
+                                    <th>Tên Dự Án</th>
+                                    <th>Tiến Độ (%)</th>
+                                    <th>Nhà Tài Trợ</th>
+                                    <th>Ngày Hợp Tác</th>
+                                    <th>Trạng Thái</th>
+                                    <th>Lý Do</th>
+                                    <th>Hành Động</th>
+                                    <th>Đã xem</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+                                <!-- Render báo cáo từ JS -->
+                            </tbody>
+                        </table>
+                
+                        <div id="details-modal" class="modal">
+                            <!-- render từ js -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span style="margin-left: 10px;">© 2024 Hành Trình Xanh. All rights reserved.</span>
+    </footer>      
+    <script type="module" src="../director/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

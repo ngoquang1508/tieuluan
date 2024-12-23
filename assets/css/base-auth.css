@@ -1,0 +1,165 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-size: 1.4rem;
+    user-select: none;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://i.pinimg.com/originals/c5/16/ed/c516ed9fdeffcdcf8345b71dd221b616.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: amin 10s linear infinite;
+    position: relative;
+}
+
+@keyframes amin {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.login-box {
+    width: 38vw;
+    height: 80vh;
+    position: relative;
+    border-radius: 15px;
+    border: 1px solid #ffffff80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+}
+
+form {
+    width: 80%;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    margin: 24px 0;
+}
+
+.input-box {
+    width: 100%;
+    margin: 48px 0;
+    position: relative;
+    border-bottom: 1px solid #fff;
+}
+
+.input-box label {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    color: #fff;
+    transform: translateY(-50%);
+}
+
+.remember-forgot {
+    margin: 0 0 32px 0;
+    font-size: 0.9rem;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label {
+    display: flex;
+    gap: 5px;
+}
+
+.remember-forgot input {
+    transform: scale(1.3);
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #000;
+    font-weight: 500;
+}
+
+.register-link {
+    font-size: 0.9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.backToHome {
+    position: absolute;
+    top: 5%;
+    left: 2.5%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 5px 8px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.backToHome span {
+    font-size: 1rem;
+}
+
+.backToHome:hover {
+    background-color: rgba(81, 255, 90, 0.1);
+}

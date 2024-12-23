@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../administer/qli.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+    <div class="header__nav">
+        <div class="nav">
+            <div class="nav__left">
+                <a href="#">
+                    <img src="../assets/img/logo-tu-thien.jpg" alt="">
+                </a>
+                <div class="nav__search">
+                    <input name="nav-input" type="search" placeholder="search">
+                    <label for="nav-input">
+                        <i class='bx bx-search-alt-2'></i>
+                    </label>
+                </div>
+            </div>
+            <div class="nav__rigth">
+                <div class="nav__bell">
+                    <div class="bell-icon">
+                        <i class='bx bxs-bell'></i>
+                    </div>
+                    <div class="nav__notification">
+                        <img class="nav__noti-img" src="https://th.bing.com/th/id/OIP.SHUdK9-FRuPFOWucNcB4JAHaHa?pid=ImgDet&w=204&h=204&c=7&dpr=1.3" alt="">
+                    </div>
+                </div>
+
+                <img class="nav__avt" src="../assets/img/avt_mac_dinh.jpg" alt="">
+                
+                <div class="box-logout">
+                    <i class='bx bx-log-out log-out' id="log-out"></i>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <input type="checkbox" name="input-check" id="input-check" hidden>
+        <label for="input-check" class="overlay"></label>
+
+
+        <!-- sidebar -->
+        <div class="sidebar">
+            <!-- icon -->
+            <div class="sidebar-close">
+                <label for="input-check">
+                    <i class="bx bx-menu sidebar-menu-icon"></i>
+                </label>
+                <label for="input-check">
+                    <i class="bx bx-x sidebar-close-icon"></i>
+                </label>
+            </div>
+
+            <!-- item -->
+             <ul class="sidebar__list">
+                <li class="main__tab-link sidebar__item-link active">
+                    <a href="#">
+                        <i class='active-icon bx bxs-home-alt-2 active'></i>
+                        <span>trang chủ</span>
+                    </a>
+                </li>
+                <li class="main__tab-link sidebar__item-link">
+                    <a href="#">
+                        <i class="active-icon bx bx-folder"></i>
+                        <span>dự án</span>
+                    </a>
+                </li>
+                <li class="main__tab-link sidebar__item-link">
+                    <a href="#">
+                        <i class='active-icon bx bxs-user-plus'></i>
+                        <span>đối tác và cộng đồng</span>
+                    </a>
+                </li>
+                <li class="main__tab-link sidebar__item-link">
+                    <a href="#">
+                        <i class="active-icon bx bxs-package"></i>
+                        <span>Kho hàng</span>
+                    </a>
+                </li>
+                <li class="main__tab-link sidebar__item-link">
+                    <a href="#">
+                        <i class='active-icon bx bxs-bar-chart-square'></i>
+                        <span>Tạo báo cáo</span>
+                    </a>
+                </li>
+                <li class="sidebar__item-link">
+                    <a href="#">
+                        <i class='bx bxs-cog'></i>
+                        <span>setting</span>
+                    </a>
+                </li>
+             </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- Trang chủ -->
+        <div class="main__tab main__home" style="display: block;">
+            <h1>Tổng Quan Quỹ Từ Thiện</h1>
+            <div class="dashboard">
+                <div class="chart-container">
+                    <canvas id="financialChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="activityChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dự án -->
+         <div class="main__tab main__project" style="display: none;">
+            <h1>Danh sách dự án</h1>
+            <div class="main__project-container">
+                <table class="main__project-table">
+                    <thead>
+                        <tr>
+                            <th>số thứ tự</th>
+                            <th>Tên dự án</th>
+                            <th>Nội dung</th>
+                            <th>Ngày khởi công</th>
+                            <th>Đối tác</th>
+                            <th>Số tiền dự kiến</th>
+                            <th>Nhân lực dự kiến</th>
+                            <th>Chỉnh sửa</th>
+                            <th>Báo cáo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Render danh sách dự án từ JS -->
+                    </tbody>
+                </table>
+            </div>
+         </div>
+        
+        <!-- Đối tác và cộng đồng -->
+         <div class="main__tab main__partners-communities" style="display: none;">
+            <h1>Đối tác và cộng đồng</h1>
+            <div class="main__pc-container">
+                <!-- Danh sách thông tin nhà tài trợ -->
+                <table class="main__pc-item">
+                    <h2>Nhà tài trợ</h2>
+                    <thead>
+                        <tr>
+                            <th>Số thứ tự</th>
+                            <th>Nhà tài trợ</th>
+                            <th>Loại hình tổ chức</th>
+                            <th>Số tiền ủng hộ</th>
+                            <th>Kết nối</th>
+                            <th>Ngày hợp tác</th>
+                            <th>Danh mục hỗ trợ</th>
+                            <th>Thay đổi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Render danh sách dự án từ JS -->
+                    </tbody>
+                </table>
+                <!-- Danh sách thông tin Đối tượng nhận hỗ trợ -->
+                <table class="main__pc-item">
+                    <h2>Đối tượng nhận hỗ trợ</h2>
+                    <thead>
+                        <tr>
+                            <th>số thứ tự</th>
+                            <th>Họ tên</th>
+                            <th>Ngày sinh</th>
+                            <th>Hoàn cảnh</th>
+                            <th>Địa chỉ</th>
+                            <th>Chính sách hỗ trợ</th>
+                            <th>Ngày nhận</th>
+                            <th>Mong muốn</th>
+                            <th>Thay đổi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Render danh sách dự án từ JS -->
+                    </tbody>
+                </table>
+                <!-- Danh sách thông tin Tình nguyện viên -->
+                <table class="main__pc-item">
+                    <h2>Tình nguyện viên</h2>
+                    <thead>
+                        <tr>
+                            <th>số thứ tự</th>
+                            <th>Họ tên</th>
+                            <th>Ngày sinh</th>
+                            <th>Kĩ năng</th>
+                            <th>Kết nối</th>
+                            <th>Ngày tham gia</th>
+                            <th>Mong muốn</th>
+                            <th>Thay đổi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Render danh sách dự án từ JS -->
+                    </tbody>
+                </table>
+            </div>
+         </div>
+        
+        <!-- Kho hàng -->
+        <div class="main__tab main__store" style="display: none;">
+            <h1>Thống kê vật phẩm trong kho</h1>
+            <table class="main__pc-item">
+                <thead>
+                    <tr>
+                        <th>Số thứ tự</th>
+                        <th>Tên mặt hàng</th>
+                        <th>Phân loại</th>
+                        <th>Số lượng trong kho</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Render danh sách dự án từ JS -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tạo báo cáo -->
+         <div class="main__tab main__createReport" style="display: none;">
+             <h2>Tạo báo cáo</h2>
+            <div class="report-form" id="reportForm">
+                <form action="#" method="POST">
+                    <label for="report-title">Tiêu đề báo cáo:</label>
+                    <input type="text" id="report-title" name="report-title" required>
+
+                    <label for="report-date">Ngày báo cáo:</label>
+                    <input type="date" id="report-date" name="report-date" required>
+
+                    <label for="report-summary">Tóm tắt nội dung:</label>
+                    <textarea id="report-summary" name="report-summary" rows="4" required></textarea>
+
+                    <label for="report-details">Chi tiết báo cáo:</label>
+                    <textarea id="report-details" name="report-details" rows="6" required></textarea>
+
+                    <label for="report-image">Ảnh minh họa (nếu có):</label>
+                    <input type="file" id="report-image" name="report-image">
+
+                    <div style="display: flex; align-items: center; gap: 2rem;">
+                        <button class="create-report-btn" type="submit">Tạo báo cáo</button>
+                        <p id="success-message" style="color: green; display: none;">Báo cáo đã được tạo thành công!</p>
+                    </div>
+                </form>
+            </div>
+         </div>
+
+        </main>
+        
+        <footer class="main__footer">
+            <span style="margin-left: 10px;">© 2024 Hành Trình Xanh. All rights reserved.</span>
+        </footer>
+
+    <script type="module" src="../administer/script.js" defer></script>
+</body>
+</html>

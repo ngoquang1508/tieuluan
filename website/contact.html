@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ</title>
+    <link rel="stylesheet" href="../assets/css/base-website.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.min.css">    
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <nav class="header-top__navbar">
+                    <ul class="header-top__navbar-list">
+                        <li class="header-top__navbar-item">
+                            <i class="header-top__navbar-item-icon fa-solid fa-phone"></i>
+                            <p><strong>Liên hệ:</strong><a href="tel:+334572773">(+84) 0334572773</a></p>
+                        </li>
+                        <li class="header-top__navbar-item">
+                            <i class="header-top__navbar-item-icon fa-solid fa-envelope"></i>
+                            <p class="email"><strong>Email:</strong> <a href="#">contact@tuthien.com</a></p>
+                        </li>
+                    </ul>
+                    <ul class="header-top__navbar-list">
+                        <a href="#" class="header-top__navbar-item-social">
+                            <li><i class="fa-brands fa-facebook-f"></i></li>
+                        </a>
+                        <a href="#" class="header-top__navbar-item-social">
+                            <li><i class="fa-brands fa-twitter"></i></li>
+                        </a>
+                        <a href="#" class="header-top__navbar-item-social">
+                            <li><i class="fa-brands fa-youtube"></i></li>
+                        </a>
+                        <a href="#" class="header-top__navbar-item-social">
+                            <li><i class="fa-brands fa-tiktok"></i></li>
+                        </a>
+                        <a href="#" class="header-top__navbar-item-social">
+                            <li><i class="fa-brands fa-threads"></i></li>
+                        </a>
+                    </ul>
+                </nav>
+
+                <div class="header-main__navbar-container">
+                    <nav class="header-main__navbar">
+                        <div class="header-main__navbar-logo">
+                            <a href="../trangchu.html"><img src="../assets/img/logo-tu-thien.jpg" alt="logo"></a>
+                        </div>
+                        <div class="header-main__navbar-left">
+                            <div class="header-main__navbar-list">
+                                <a href="../trangchu.html" class="header-main__navbar-item navbar-active">Trang chủ</a>
+                                <a href="../website/about.html" class="header-main__navbar-item">Giới thiệu</a>
+                                <a href="../website/events.html" class="header-main__navbar-item">Sự kiện & Tin tức</a>
+                                <a href="../website/contact.html" class="header-main__navbar-item">Liên hệ</a>
+                                <a href="../website/donate.html" class="header-main__navbar-item">Donate</a>
+                                
+                                <div id="navbar-user" class="header-main__navbar-item header-main__navbar-user" style="display: none;">
+                                    <div style="display: flex;">
+                                        <img id="img_index" src="../assets/img/avt_mac_dinh.jpg" alt="avatar" class="header-main__navbar-user-img">
+                                        <span class="header-main__navbar-user-name">User</span>
+                                    </div>
+    
+                                    <ul class="header-main__navbar-user-menu">
+                                        <li class="header-main__navbar-menu-user-item">
+                                            <a href="../website/personal-info.html">Thông tin cá nhân</a>
+                                        </li>
+                                        <li class="header-main__navbar-menu-user-item">
+                                            <a id="logout" href="../auth/login.html">Đăng xuất</a>
+                                        </li>
+                                    </ul>  
+                                </div>
+                                <!-- Khi chưa đăng nhập -->
+                                <div id="navbar-auth" class="header-main__navbar-item header-main__navbar-form" style="display: block;">
+                                    <a href="../auth/register.html" class="header-main__navbar-form-register">Đăng ký</a>
+                                    <a href="../auth/login.html" class="header-main__navbar-form-login">Đăng nhập</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+        
+        <div class="app-contact__container">
+            <!-- Form gửi ý kiến -->
+            <div class="app-contact__container-box">
+                <div class="app-contact__container-contact">
+                    <div class="app-contact__container-info">
+                        <div class="app-contact__info">
+                            <h2>Gửi tin nhắn</h2>
+                            <div class="app-contact__list">
+                                <div class="app-contact__item">
+                                    <i class="fa-solid fa-user" style="font-size: 1.8rem;margin: 4px 8px 4px 0;"></i>
+                                    <input id="contact-user" type="text" placeholder="Họ và tên (*)" style="padding: 10px 25px 10px 5px;">
+                                    <p style="color: red;font-size: 1.4rem;margin-top: 5px;margin-left: 27px;display: block;" id="error-user"></p>
+                                </div>
+                                <div class="app-contact__item">
+                                    <i class="fa-solid fa-envelope" style="font-size: 1.8rem;margin: 4px 8px 4px 0;"></i>
+                                    <input id="contact-email" type="text" placeholder="Email (*)" style="padding: 10px 25px 10px 5px;">
+                                    <p style="color: red;font-size: 1.4rem;margin-top: 5px;display: none;margin-left: 27px;display: block;" id="error-email"></p>
+                                </div>
+                                <div class="app-contact__item">
+                                    <i class="fa-solid fa-phone" style="font-size: 1.8rem;margin: 4px 8px 4px 0;"></i>
+                                    <input id="contact-phone_number" type="text" placeholder="Số điện thoại (*)" style="padding: 10px 25px 10px 5px;">
+                                    <p style="color: red;font-size: 1.4rem;margin-top: 5px;display: none;margin-left: 27px;display: block;" id="error-phone"></p>
+                                </div>
+                            </div>
+                            
+                            <div class="app-contact__request">
+                                <textarea style="width: 55.5vw !important;padding: 5px 0 0 5px;position: relative;resize: none;margin: 20px 0 40px;" name="your-message" id="message" placeholder="Thông tin yêu cầu..." rows="10" cols="100" maxlength="2000" aria-required="true" aria-invalid="false"></textarea>
+                                <p style="color: red;font-size: 1.4rem;display: none;position: absolute;bottom: 20px;display: block;" id="error-message"></p>
+                            </div>
+                            
+                            <button id="btn-submit" class="app-contact__btn-send_message" type="submit">Gửi tin nhắn</button>
+                        </div>  
+                    </div>
+        
+                    <div class="app-contact__container-info-contact">
+                        <h2>Thông tin liên hệ</h2>
+                        <ul>
+                            <li><strong>Địa chỉ:</strong> Tầng 4, Số 59, Ngõ 444, Đội Cấn</li>
+                            <li><strong>Email:</strong> <a href="#">contact@tuthien.com</a></li>
+                            <li><strong>Điện thoại:</strong> <a href="#">(+84) 0334572773</a></li>
+                            <li><strong>Website:</strong> <a href="../trangchu.html">https://www.hanhtrinhxanh.org</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form đăng ký tình nguyện viên -->
+            <div class="form-volunteer__container">
+                <h3 class="form-volunteer__title">Đăng ký tình nguyện viên</h3>
+                
+                <div class="form-volunteer">
+                    <div class="form-volunteer__list">
+                        <h4 class="form-volunteer__title-info">Thông tin đăng ký</h4>
+
+                        <div class="form-volunteer__item">
+                            <label class="volunteer-label" for="fviName">Họ và tên (*)</label>
+                            <input id="fviName" class="volunteer-input" type="text" placeholder="Họ và tên">
+                        </div>
+
+                        <div class="form-volunteer__item">
+                            <label class="volunteer-label" for="fviDate">Ngày sinh (*)</label>
+                            <input id="fviDate" class="volunteer-input" type="date" placeholder="Ngày sinh">
+                        </div>
+
+                        <div class="form-volunteer__item">
+                            <label class="volunteer-label" for="fviPhoneNum">Số điện thoại (*)</label>
+                            <input id="fviPhoneNum" class="volunteer-input" type="tel" placeholder="Số điện thoại">
+                        </div>
+
+                        <div class="form-volunteer__item">
+                            <label class="volunteer-label" for="fviAddress">Địa chỉ (*)</label>
+                            <input id="fviAddress" class="volunteer-input" type="text" placeholder="Địa chỉ">
+                        </div>
+
+                        <div class="form-volunteer__item">
+                            <label class="volunteer-label" for="fviGmail">Gmail (*)</label>
+                            <input id="fviGmail" class="volunteer-input" type="text" placeholder="Gmail">
+                        </div>
+                    </div>
+                    <button class="fvi-btn" id="fviBtn" type="submit">Gửi đăng ký</button>
+                </div>
+            </div>
+            
+            <div class="app-contact__map">
+                <h3 class="ac-map">Bản đồ</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.5104568524557!2d105.79967277446522!3d21.01225188063301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab5f7e8677a7%3A0xe8e81820d9c9ed9b!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBMYW8gxJHhu5luZyAtIFjDoyBo4buZaQ!5e0!3m2!1svi!2s!4v1730820072717!5m2!1svi!2s" width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        
+
+        <footer class="footer">
+            <div class="footer-page"></div>
+
+            <div class="footer-list">
+                <div class="footer-item">
+                    <h2 class="footer-item-text">VỀ CHÚNG TÔI</h2>
+                    <p>
+                        Quỹ Từ thiện Hành Trình Xanh được thành lập theo Quyết định số: 24/QĐ-BNV ngày 5 tháng 1 năm 2018. 
+                        Quỹ Hành Trình Xanh là phiên bản mở rộng của Quỹ Từ thiện Tình Thương thành phố Hà Nội.
+                        Quỹ có phạm vi hoạt động toàn quốc.
+                    </p>
+                </div>
+                <div class="footer-item">
+                    <h2 class="footer-item-text">HƯỚNG DẪN - GIỚI THIỆU</h2>
+                    <ul>
+                        <a href="../website/about.html"><li>Giới thiệu</li></a>
+                        <a href="../website/events.html"><li>Sự kiện & tin tức</li></a>
+                        <a href="../website/contact.html"><li>Đăng ký thành viên</li></a>
+                        <a href="../website/donate.html"><li>Hướng dẫn đóng góp</li></a>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h2 class="footer-item-text">CHƯƠNG TRÌNH</h2>
+                    <ul>
+                        <a href="#"><li>Trợ giúp y tế</li></a>
+                        <a href="#"><li>Bảo vệ môi trường</li></a>
+                        <a href="#"><li>Dự án xây dựng</li></a>
+                        <a href="#"><li>Cứu trợ khẩn cấp</li></a>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h2 class="footer-item-text">QUỸ TỪ THIỆN HÀNH TRÌNH XANH</h2>
+                    <ul>
+                        <a href="https://maps.app.goo.gl/CWDGNTxWUipm6QZ77" target="_blank"><li>43, TDH, Trung Hoà, Cầu Giấy, HN.</li></a>
+                        <a href="tel:+334572773"><li> Hotline :  (+84) 0334572773</li></a>
+                        <a href="#"><li> Fax : (84-028) 3910 7614</li></a>
+                        <a href="#"><li>Email:  contact@tuthien.com</li></a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__footer-page">
+                <p class="footer__text">2024 - Bản quyền thuộc về Hành trình xanh</p>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="../fileJS/checkLoginStatus.js"></script>
+    <script type="module" src="../fileJS/contact.js"></script>
+    <script type="module" src="../fileJS/profilePicture.js"></script>
+</body>
+</html>

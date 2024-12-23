@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="stylesheet" href="../assets/css/base-website.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.min.css">    
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <nav class="header-top__navbar">
+                    <ul class="header-top__navbar-list">
+                        <li class="header-top__navbar-item">
+                            <i class="header-top__navbar-item-icon fa-solid fa-phone"></i>
+                            <p><strong>Liên hệ:</strong><a href="tel:+334572773">(+84) 0334572773</a></p>
+                        </li>
+                        <li class="header-top__navbar-item">
+                            <i class="header-top__navbar-item-icon fa-solid fa-envelope"></i>
+                            <p class="email"><strong>Email:</strong> <a href="#">contact@tuthien.com</a></p>
+                        </li>
+                    </ul>
+                    <ul class="header-top__navbar-list">
+                        <a href="#" class="header-top__navbar-item-social">
+                            <li><i class="fa-brands fa-facebook-f"></i></li>
+                        </a>
+                        <a href="#" class="header-top__navbar-item-social">
+                            <li><i class="fa-brands fa-twitter"></i></li>
+                        </a>
+                        <a href="#" class="header-top__navbar-item-social">
+                            <li><i class="fa-brands fa-youtube"></i></li>
+                        </a>
+                        <a href="#" class="header-top__navbar-item-social">
+                            <li><i class="fa-brands fa-tiktok"></i></li>
+                        </a>
+                        <a href="#" class="header-top__navbar-item-social">
+                            <li><i class="fa-brands fa-threads"></i></li>
+                        </a>
+                    </ul>
+                </nav>
+
+                <div class="header-main__navbar-container">
+                    <nav class="header-main__navbar">
+                        <div class="header-main__navbar-logo">
+                            <a href="../trangchu.html"><img src="../assets/img/logo-tu-thien.jpg" alt="logo"></a>
+                        </div>
+                        <div class="header-main__navbar-left">
+                            <div class="header-main__navbar-list">
+                                <a href="../trangchu.html" class="header-main__navbar-item navbar-active">Trang chủ</a>
+                                <a href="../website/about.html" class="header-main__navbar-item">Giới thiệu</a>
+                                <a href="../website/events.html" class="header-main__navbar-item">Sự kiện & Tin tức</a>
+                                <a href="../website/contact.html" class="header-main__navbar-item">Liên hệ</a>
+                                <a href="../website/donate.html" class="header-main__navbar-item">Donate</a>
+                                
+                                <div id="navbar-user" class="header-main__navbar-item header-main__navbar-user" style="display: none;">
+                                    <div style="display: flex;">
+                                        <img id="img_index" src="../assets/img/avt_mac_dinh.jpg" alt="avatar" class="header-main__navbar-user-img">
+                                        <span class="header-main__navbar-user-name">User</span>
+                                    </div>
+    
+                                    <ul class="header-main__navbar-user-menu">
+                                        <li class="header-main__navbar-menu-user-item">
+                                            <a href="../website/personal-info.html">Thông tin cá nhân</a>
+                                        </li>
+                                        <li class="header-main__navbar-menu-user-item">
+                                            <a id="logout" href="../auth/login.html">Đăng xuất</a>
+                                        </li>
+                                    </ul>  
+                                </div>
+                                <!-- Khi chưa đăng nhập -->
+                                <div id="navbar-auth" class="header-main__navbar-item header-main__navbar-form" style="display: block;">
+                                    <a href="../auth/register.html" class="header-main__navbar-form-register">Đăng ký</a>
+                                    <a href="../auth/login.html" class="header-main__navbar-form-login">Đăng nhập</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+
+        <div class="app-donate__container">
+            <div class="app-donate__container-main">
+                <div class="app-donate__container-form">
+                    <div class="app-donate__content">
+                        <h4 class="app-donate__content-title">Chung tay cùng chúng tôi</h4>
+                        <p class="app-donate__content-text">Đồng hành cùng chúng tôi trong hành trình mang đến những điều tốt đẹp nhất cho tất cả mọi người. Điều đó đến từ tấm lòng của các bạn.</p>
+                    </div>
+                    <div class="app-donate__form">
+                        <form action method="post">
+                            <ul id="progressbar">
+                                <li class="active-1 next-step">1. Đóng góp</li>
+                                <li class="active-2">2. Danh tính</li>
+                                <li class="active-3">3. Thanh toán</li>
+                                <li class="active-4">4. Kết quả</li>
+                            </ul>
+                            <!-- Step 1 -->
+                            <fieldset id="step-1" class="donate--step" style="display: block;transform: scale(1); opacity: 1;">
+                                <h2 class="dn-title">
+                                    Quốc gia của Ông/Bà
+                                    <span class="sevenLabelRequired">*</span>
+                                </h2>
+                                <h3 class="dn-subtitle hideOnAll">This is step 1</h3>
+                                
+                                <select name="country_code" id="inputCountryCode" style="display: none; max-height: 100px;">
+                                    <option value="VI">Việt Nam</option>
+                                    <option value="TH">Thái Lan</option>
+                                    <option value="MY">Malaysia</option>
+                                    <option value="SG">Singapore</option>
+                                    <option value="ID">Indonesia</option>
+                                    <option value="PH">Philippines</option>
+                                    <option value="MM">Myanmar</option>
+                                    <option value="KH">Campuchia</option>
+                                    <option value="LA">Lào</option>
+                                    <option value="BN">Brunei</option>
+                                    <option value="TL">Đông Timor</option>
+                                    <option value="CN">Trung Quốc</option>
+                                    <option value="JP">Nhật Bản</option>
+                                    <option value="KR">Hàn Quốc</option>
+                                    <option value="IN">Ấn Độ</option>
+                                    <option value="PK">Pakistan</option>
+                                    <option value="BD">Bangladesh</option>
+                                    <option value="LK">Sri Lanka</option>
+                                    <option value="NP">Nepal</option>
+                                    <option value="BT">Bhutan</option>
+                                    <option value="MV">Maldives</option>
+                                    <option value="AF">Afghanistan</option>
+                                    <option value="KZ">Kazakhstan</option>
+                                    <option value="UZ">Uzbekistan</option>
+                                    <option value="TM">Turkmenistan</option>
+                                    <option value="KG">Kyrgyzstan</option>
+                                    <option value="TJ">Tajikistan</option>
+                                    <option value="MN">Mông Cổ</option>
+                                    <option value="GE">Gruzia</option>
+                                    <option value="AM">Armenia</option>
+                                    <option value="AZ">Azerbaijan</option>
+                                    <option value="SA">Ả Rập Xê Út</option>
+                                    <option value="AE">Các Tiểu Vương Quốc Ả Rập Thống Nhất</option>
+                                    <option value="QA">Qatar</option>
+                                    <option value="KW">Kuwait</option>
+                                    <option value="OM">Oman</option>
+                                    <option value="BH">Bahrain</option>
+                                    <option value="IR">Iran</option>
+                                    <option value="IQ">Iraq</option>
+                                    <option value="SY">Syria</option>
+                                    <option value="LB">Liban</option>
+                                    <option value="JO">Jordan</option>
+                                    <option value="IL">Israel</option>
+                                    <option value="PS">Palestine</option>
+                                    <option value="YE">Yemen</option>
+                                    <option value="TR">Thổ Nhĩ Kỳ</option>
+                                    <option value="CY">Cyprus</option>
+                                </select>
+                                <div class="nice-select" tabindex="0">
+                                    <span class="current">Việt Nam</span>
+                                    <ul class="list" style="display: none;">
+                                        <li data-value="VI" class="option">Việt Nam</li>
+                                        <li data-value="TH" class="option">Thái Lan</li>
+                                        <li data-value="MY" class="option">Malaysia</li>
+                                        <li data-value="SG" class="option">Singapore</li>
+                                        <li data-value="ID" class="option">Indonesia</li>
+                                        <li data-value="PH" class="option">Philippines</li>
+                                        <li data-value="MM" class="option">Myanmar</li>
+                                        <li data-value="KH" class="option">Campuchia</li>
+                                        <li data-value="LA" class="option">Lào</li>
+                                        <li data-value="BN" class="option">Brunei</li>
+                                        <li data-value="TL" class="option">Đông Timor</li>
+                                        <li data-value="CN" class="option">Trung Quốc</li>
+                                        <li data-value="JP" class="option">Nhật Bản</li>
+                                        <li data-value="KR" class="option">Hàn Quốc</li>
+                                        <li data-value="IN" class="option">Ấn Độ</li>
+                                        <li data-value="PK" class="option">Pakistan</li>
+                                        <li data-value="BD" class="option">Bangladesh</li>
+                                        <li data-value="LK" class="option">Sri Lanka</li>
+                                        <li data-value="NP" class="option">Nepal</li>
+                                        <li data-value="BT" class="option">Bhutan</li>
+                                        <li data-value="MV" class="option">Maldives</li>
+                                        <li data-value="AF" class="option">Afghanistan</li>
+                                        <li data-value="KZ" class="option">Kazakhstan</li>
+                                        <li data-value="UZ" class="option">Uzbekistan</li>
+                                        <li data-value="TM" class="option">Turkmenistan</li>
+                                        <li data-value="KG" class="option">Kyrgyzstan</li>
+                                        <li data-value="TJ" class="option">Tajikistan</li>
+                                        <li data-value="MN" class="option">Mông Cổ</li>
+                                        <li data-value="GE" class="option">Gruzia</li>
+                                        <li data-value="AM" class="option">Armenia</li>
+                                        <li data-value="AZ" class="option">Azerbaijan</li>
+                                        <li data-value="SA" class="option">Ả Rập Xê Út</li>
+                                        <li data-value="AE" class="option">Các Tiểu Vương Quốc Ả Rập Thống Nhất</li>
+                                        <li data-value="QA" class="option">Qatar</li>
+                                        <li data-value="KW" class="option">Kuwait</li>
+                                        <li data-value="OM" class="option">Oman</li>
+                                        <li data-value="BH" class="option">Bahrain</li>
+                                        <li data-value="IR" class="option">Iran</li>
+                                        <li data-value="IQ" class="option">Iraq</li>
+                                        <li data-value="SY" class="option">Syria</li>
+                                        <li data-value="LB" class="option">Liban</li>
+                                        <li data-value="JO" class="option">Jordan</li>
+                                        <li data-value="IL" class="option">Israel</li>
+                                        <li data-value="PS" class="option">Palestine</li>
+                                        <li data-value="YE" class="option">Yemen</li>
+                                        <li data-value="TR" class="option">Thổ Nhĩ Kỳ</li>
+                                        <li data-value="CY" class="option">Cyprus</li>
+                                    </ul>
+                                    <div class="arrow">
+                                        <i class="fa-solid fa-angle-down" style="display: block;"></i>
+                                    </div>
+                                </div>
+                                
+                                <h2 class="dn-title">
+                                    Số tiền đóng góp bằng VNĐ
+                                    <span class="sevenLabelRequired">*</span>
+                                </h2>
+                                <div class="dn-list--choose-money list">
+                                    <a href="javascript:;" data-money="50000" class="check-money choose-1">50.000</a>
+                                    <a href="javascript:;" data-money="100000" class="check-money choose-2">100.000</a>
+                                    <a href="javascript:;" data-money="200000" class="check-money choose-3">200.000</a>
+                                    <a href="javascript:;" data-money="500000" class="check-money choose-4">500.000</a>
+                                    <a href="javascript:;" data-money="1000000" class="check-money choose-5">1.000.000</a>
+                                    <input type="number" autocomplete="random-string" class="form-control1 check-money-input" placeholder="Nhập số tiền khác" id="inputDonateMoney" name="donate_money" style="--webkit-appearance: none;height: 40px;width: 100%;padding-left: 8px;font-size: 16px;margin-bottom: 55px;">
+                                </div>
+                                <div class="-qr-code-group form-actions">
+                                    <input type="button" name="next" class="next action-button" data-id="1" value="Tiếp tục" style="position: absolute;bottom: 0;right: 0;">
+                                </div>
+                            </fieldset>
+        
+                            <!-- Step 2 -->
+                            <fieldset id="step-2" class="donate--step" style="display: none;left: 0%;opacity: 1;">
+                                <h2 class="dn-title">
+                                    Họ và tên
+                                    <span class="sevenLabelRequired">*</span>
+                                </h2>
+                                <div class="-qr-code-group-step2">
+                                    <input type="text" autocomplete="random-string" placeholder="Nhập họ và tên" id="inputDonateName" name="donate_name" class="form-control">
+                                </div>
+        
+                                <h2 class="dn-title">
+                                    Địa chỉ Email
+                                    <span class="sevenLabelRequired">*</span>
+                                </h2>
+                                <div class="-qr-code-group-step2">
+                                    <input type="text" autocomplete="random-string" placeholder="Nhập email" id="inputDonateEmail" name="donate_email" class="form-control">
+                                </div>
+        
+                                <h2 class="dn-title">
+                                    Tôi muốn đóng góp vào hạng mục
+                                    <span class="sevenLabelRequired">*</span>
+                                </h2>
+                                <select name="donate_type_val" id="inputDonateTypeVal" class="form-control" style="display: none;">
+                                    <option value="Đóng góp 1 lần">Đóng góp 1 lần</option>
+                                    <option value="Bảo vệ môi trường">Bảo vệ môi trường</option>
+                                    <option value="Bữa cơm miễn phí">Bữa cơm miễn phí</option>
+                                    <option value="Hành trình đến trường">Hành trình đến trường</option>
+                                    <option value="Đêm hòa nhạc">Đêm hòa nhạc</option>
+                                </select>
+                                <div class="nice-select" tabindex="0">
+                                    <span class="current">Đóng góp 1 lần</span>
+                                    <ul class="list" style="display: none;">
+                                        <li data-value="Đóng góp 1 lần" class="option selected focus">Đóng góp 1 lần</li>
+                                        <li data-value="Bảo vệ môi trường" class="option">Bảo vệ môi trường</li>
+                                        <li data-value="Bữa cơm miễn phí" class="option">Bữa cơm miễn phí</li>
+                                        <li data-value="Hành trình đến trường" class="option">Hành trình đến trường</li>
+                                        <li data-value="Đêm hòa nhạc" class="option">Đêm hòa nhạc</li>
+                                    </ul>
+                                    <div class="arrow">
+                                        <i class="fa-solid fa-angle-down" style="display: block;"></i>
+                                    </div>
+                                </div>
+                                
+                                <h2 class="dn-title">
+                                    Số điện thoại
+                                    <span class="sevenLabelRequired">*</span>
+                                </h2>
+                                <div class="dn-form-group-step2">
+                                    <input type="number" autocomplete="random-string" placeholder="Nhập số điện thoại" id="inputDonatePhone" name="donate_phone" class="form-control">
+                                </div>
+        
+                                <h2 class="dn-title">
+                                   Thông điệp
+                                    <!-- <span class="sevenLabelRequired">*</span> -->
+                                </h2>
+                                <textarea name="donate_content" id="inputDonateContent" style="height: 150px;width: 100%; resize: none;padding: 8px 0 0 8px;" rows="10" cols="100" placeholder="Nhập thông điệp" class="form-control"></textarea>
+        
+                                <div class="form-actions">
+                                    <input type="button" name="previous" class="previous action-button" value="Trở lại">
+                                    <input type="button" name="next" class="next action-button" value="Tiếp tục" data-id="2">
+                                </div>
+                            </fieldset>
+                            
+                            <!-- Step 3 -->
+                            <fieldset id="step-3" class="donate--step" style="display: none;left: 0%;opacity: 1;">
+                                <h2 class="dn-title">
+                                    Phương thức quyên góp
+                                    <span class="sevenLabelRequired">*</span>
+                                </h2>
+                                <div class="dn-qr-code">
+                                    <img src="../assets/img/qrcoder.png" alt="qr-code" style="width: 200px;height: 200px;">
+                                    <p>Tên chủ tài khoản: QUY TU THIEN HANH TRINH XANH</p>
+                                    <p>Số tài khoản: 475848</p>
+                                    <p>Ngân hàng: BIDV</p>
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="checkDaDongYDieuKhoan1" class="checked-box">
+                                        <label for="checkDaDongYDieuKhoan1" style="font-size: 14px;line-height: 22px;">Đã đọc và đồng ý với các điều khoản trước khi quyên góp</label> <br>
+                                        <input type="checkbox" id="checkDaDongYDieuKhoan2" class="checked-box">
+                                        <label for="checkDaDongYDieuKhoan2" style="font-size: 14px;line-height: 22px;">Nhận bản tin hàng tháng về các bé và các dự án của Quỹ Nâng Bước Tuổi Thơ</label> <br>
+                                        <input type="checkbox" id="checkDaDongYDieuKhoan3" class="checked-box">
+                                        <label for="checkDaDongYDieuKhoan3" style="font-size: 14px;line-height: 22px;">Ẩn danh đóng góp</label> <br>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <input type="button" name="previous" class="previous action-button" value="Trở lại">
+                                    <input type="button" name="next" class="next action-button" value="Hoàn tất" data-id="3">
+                                </div>
+                            </fieldset>
+
+                            <!-- Step 4 -->
+                            <fieldset id="step-4" class="donate--step" style="display: none;left: 0%;opacity: 1;">
+                                    <!-- Render từ Object 'bill' ra thông tin xác nhận từ JavaScript -->
+                                     <div id="root"></div>
+                                    <!-- <input type="button" name="previous" class="previous action-button" value="Trở lại"> -->
+                                    <input type="button" name="Về trang chủ" class="btn-trangchu" value="Về trang chủ" data-id="4">
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="app-donate__container-info">
+                    <div>
+                        <h4 class="title-info-contact">Thông tin liên hệ</h4>
+                        <p class="text--info">Lan tỏa sự yêu thương và ý thức bảo vệ môi trường qua từng hành động nhỏ. Quỹ Hành Trình Xanh hướng đến giúp đỡ những người gặp hoàn cảnh khó khăn và góp phần bảo vệ môi trường sống xanh, sạch, đẹp.</p>
+                    </div>
+                    <div>
+                        <p class="text--info">
+                            <span>Chung tay vì cuộc sống xanh và ý nghĩa hơn</span> <br>
+                            <span>Quỹ Từ Thiện Hành Trình Xanh</span> <br>
+                            <span>Ngân hàng BIDV / Chi nhánh Hà Nội</span>
+                        </p>
+                    </div>
+                    <div>
+                        <ul class="title-info-contact-list">
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <a href="tel:+334572773">0334572773</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <a href="https://maps.app.goo.gl/CWDGNTxWUipm6QZ77" target="_blank">43 Đ. Trần Duy Hưng, Trung Hoà, Cầu Giấy, Hà Nội, Việt Nam.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-page"></div>
+
+            <div class="footer-list">
+                <div class="footer-item">
+                    <h2 class="footer-item-text">VỀ CHÚNG TÔI</h2>
+                    <p>
+                        Quỹ Từ thiện Hành Trình Xanh được thành lập theo Quyết định số: 24/QĐ-BNV ngày 5 tháng 1 năm 2018. 
+                        Quỹ Hành Trình Xanh là phiên bản mở rộng của Quỹ Từ thiện Tình Thương thành phố Hà Nội.
+                        Quỹ có phạm vi hoạt động toàn quốc.
+                    </p>
+                </div>
+                <div class="footer-item">
+                    <h2 class="footer-item-text">HƯỚNG DẪN - GIỚI THIỆU</h2>
+                    <ul>
+                        <a href="../website/about.html"><li>Giới thiệu</li></a>
+                        <a href="../website/events.html"><li>Sự kiện & tin tức</li></a>
+                        <a href="../website/contact.html"><li>Đăng ký thành viên</li></a>
+                        <a href="../website/donate.html"><li>Hướng dẫn đóng góp</li></a>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h2 class="footer-item-text">CHƯƠNG TRÌNH</h2>
+                    <ul>
+                        <a href="#"><li>Trợ giúp y tế</li></a>
+                        <a href="#"><li>Bảo vệ môi trường</li></a>
+                        <a href="#"><li>Dự án xây dựng</li></a>
+                        <a href="#"><li>Cứu trợ khẩn cấp</li></a>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h2 class="footer-item-text">QUỸ TỪ THIỆN HÀNH TRÌNH XANH</h2>
+                    <ul>
+                        <a href="https://maps.app.goo.gl/CWDGNTxWUipm6QZ77" target="_blank"><li>43, TDH, Trung Hoà, Cầu Giấy, HN.</li></a>
+                        <a href="tel:+334572773"><li> Hotline :  (+84) 0334572773</li></a>
+                        <a href="#"><li> Fax : (84-028) 3910 7614</li></a>
+                        <a href="#"><li>Email:  contact@tuthien.com</li></a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__footer-page">
+                <p class="footer__text">2024 - Bản quyền thuộc về Hành trình xanh</p>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="../fileJS/checkLoginStatus.js"></script>
+    <script type="module" src="../fileJS/donate.js"></script>
+    <script type="module" src="../fileJS/profilePicture.js"></script>
+</body>
+</html>

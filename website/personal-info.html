@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Cá Nhân - Hành Trình Xanh</title>
+    <link rel="stylesheet" href="../assets/css/personal-info.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="" alt="Ảnh đại diện" class="profile-pic" id="profilePic">
+                <p class="name">User</p>
+                <i class="fa-solid fa-pen pen" id="pen"></i>
+                <input type="file" name="image" class="open-file" id="fileInput" style="display:none;">
+            </div>
+            
+
+            <div class="back">
+                <a href="../trangchu.html" class="back-home">Trở về trang chủ</a>
+            </div>
+
+            <ul class="menu">
+                <li onclick="showContent('personal-info')">Thông Tin Cá Nhân</li>
+                <li onclick="showContent('donation-history')">Lịch Sử Đóng Góp</li>
+                <li onclick="showContent('volunteer-history')">Lịch Sử Tình Nguyện</li>
+                <li onclick="showContent('account-settings')">Quản Lý Tài Khoản</li>
+                <li onclick="showContent('achievements')">Chứng Nhận & Khen Thưởng</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <!-- Thông tin cá nhân -->
+            <div id="personal-info" class="content-section">
+                <h2>Thông Tin Cá Nhân</h2>
+                <ul>
+                    <li>Họ và tên: User</li>
+                    <li>Ngày sinh: 01/02/2005</li>
+                    <li>Giới tính: Nam</li>
+                    <li>Email: user@gmail.com</li>
+                    <li>Số điện thoại: 0399456456</li>
+                </ul>
+            </div>
+
+            <!-- Lịch sử đóng góp -->
+            <div id="donation-history" class="content-section" style="display: none;">
+                <h2>Lịch Sử Đóng Góp</h2>
+                <ul>
+                    <li>Dự án 1 - 500,000 VND - Ngày: 01/10/2024</li>
+                    <li>Dự án 2 - 1,000,000 VND - Ngày: 15/09/2024</li>
+                    <li>Dự án 2 - 1,000,000 VND - Ngày: 15/09/2024</li>
+                    <li>Dự án 2 - 1,000,000 VND - Ngày: 15/09/2024</li>
+                    <li>Dự án 2 - 1,000,000 VND - Ngày: 15/09/2024</li>
+                    <li>Dự án 2 - 1,000,000 VND - Ngày: 15/09/2024</li>
+                    <li>Dự án 2 - 1,000,000 VND - Ngày: 15/09/2024</li>
+                </ul>
+            </div>
+
+            <!-- Lịch sử tình nguyện -->
+            <div id="volunteer-history" class="content-section" style="display: none;">
+                <h2>Lịch Sử Tình Nguyện</h2>
+                <ul>
+                    <li>Dự án A - Thời gian: 02/2024 - Vị trí: Tình nguyện viên</li>
+                    <li>Dự án B - Thời gian: 07/2023 - Vị trí: Điều phối viên</li>
+                    <li>Dự án B - Thời gian: 07/2023 - Vị trí: Điều phối viên</li>
+                    <li>Dự án B - Thời gian: 07/2023 - Vị trí: Điều phối viên</li>
+                    <li>Dự án B - Thời gian: 07/2023 - Vị trí: Điều phối viên</li>
+                    <li>Dự án B - Thời gian: 07/2023 - Vị trí: Điều phối viên</li>
+                </ul>
+            </div>
+
+            <!-- Quản lý tài khoản -->
+            <div id="account-settings" class="content-section" style="display: none;">
+                <h2>Quản Lý Tài Khoản</h2>
+                <div class="account-buttons">
+                    <button onclick="openChangePassword()">Thay đổi mật khẩu</button>
+                    <button id="logOutToInfo">Đăng xuất</button>
+                </div>
+            </div>
+
+            <!-- Chứng nhận và khen thưởng -->
+            <div id="achievements" class="content-section" style="display: none;">
+                <h2>Chứng Nhận & Khen Thưởng</h2>
+                <ul>
+                    <li>Huy hiệu: Người đóng góp tích cực</li>
+                    <li>Chứng nhận: Đã tham gia 10 dự án thiện nguyện</li>
+                    <li>Chứng nhận: Đã tham gia 10 dự án thiện nguyện</li>
+                    <li>Chứng nhận: Đã tham gia 10 dự án thiện nguyện</li>
+                    <li>Chứng nhận: Đã tham gia 10 dự án thiện nguyện</li>
+                    <li>Chứng nhận: Đã tham gia 10 dự án thiện nguyện</li>
+                    <li>Chứng nhận: Đã tham gia 10 dự án thiện nguyện</li>
+                    <li>Chứng nhận: Đã tham gia 10 dự án thiện nguyện</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Thay đổi mật khẩu -->
+    <div id="changePasswordModal" class="modal">
+        <div class="modal-content">
+            <h2>Thay Đổi Mật Khẩu</h2>
+            <input id="passOld" type="password" placeholder="Mật khẩu cũ" required>
+            <input id="passNew" type="password" placeholder="Mật khẩu mới" required>
+            <div class="modal-buttons">
+                <button onclick="closeChangePassword()">Quay lại</button>
+                <button id="saveChange" onclick="getData(event)">Lưu thay đổi</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../fileJS/checkLoginStatus.js"></script>
+    <script type="module" src="../fileJS/pesonal-info.js"></script>
+    <script type="module" src="../fileJS/profilePicture.js"></script>
+</body>
+</html>
